@@ -1,0 +1,146 @@
+header {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--white);
+  box-sizing: border-box;
+  padding: 0 3vw;
+  box-shadow: 0px 3px 4px -1px rgba(0,0,0,0.15);
+}
+
+header .link-logo{
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+.logo-img{
+  display: block;
+  height: 40px;
+  width: 60vw;
+  max-width: 272px;
+}
+.section-right{
+  display: flex;
+  align-items: center;
+}
+.link-instagram{
+  position: relative;
+  top: 2px;
+}
+.instagram-icon{
+  width: 30px;
+  height: 30px;
+}
+@media screen and (max-width: 375px) {
+  header.content{
+      padding-left: 3vw;
+      padding-right: 3vw;
+  }
+}
+
+/* TOGGLE MENU */
+
+.main-menu{
+  display: flex;
+  align-items: center;
+}
+
+
+.nav-links.toggle {
+  transform: translateX(0);
+}
+.burger{
+  display: none;  
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.burger div:not(.overlay){
+  width: 25px;
+  height: 3px;
+  background: var(--grey);
+  margin: 5px;
+  transition:all 0.5s ease;
+}
+.burger .overlay{
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  left: 0;
+  top: 60px;
+}
+.burger.toggle .overlay{
+  display: block;
+}
+  .main-menu{
+      justify-content: space-between;
+  }
+  header .nav-links{
+      position: fixed;
+      right: 0;
+      top: 63px;
+      /* min-height: calc(100vh - 60px); */
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      margin: 0;
+      padding: 2em;
+      transform: translateX(100%);
+      transition: All 0.5s ease-in;
+      width: 50vw;
+      z-index: 999;
+      box-shadow: 0px 3px 4px -1px rgba(0,0,0,0.15);
+      border-radius: 0 16px 0;
+
+  }
+  header .nav-links li.first-level:first-child a{
+      margin-top: 0;
+  }
+  header .nav-links a{
+      margin: 1em 1em 0 1em;
+  }
+
+  .burger{
+      display: block;
+      z-index: 99;
+  }
+
+
+.nav-active{
+  transform: translateX(0);
+}
+@keyframes navLinkFade{
+  from{
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  to{
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+.toggle .line1{
+ transform: rotate(-45deg) translate(-5px,6px );
+ top: 13px;
+ width: 18px;
+ left: 4px;
+}
+.toggle .line2{
+  opacity: 0;
+}
+
+.toggle .line3{
+ transform: rotate(45deg) translate(-5px,-6px );
+ bottom: 12px;
+ width: 18px;
+ left: 4px;
+}

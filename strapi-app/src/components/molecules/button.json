@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_molecules_buttons",
+  "info": {
+    "displayName": "button"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "string"
+    },
+    "titleTag": {
+      "type": "string"
+    },
+    "class": {
+      "type": "enumeration",
+      "enum": [
+        "primary",
+        "secondary"
+      ]
+    }
+  }
+}

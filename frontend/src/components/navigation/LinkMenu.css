@@ -1,0 +1,41 @@
+.first-level ul{
+  padding: 0;
+}
+.first-level, .second-level{
+  list-style-type: none;
+  text-align: center;
+  width: 100%;
+}
+.first-level-link{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.nav-links .second-level a{
+  font-size: 1.2em;
+  text-transform: capitalize;
+}
+header .nav-links .second-level a{
+  margin: 0.3em 0.5em 0.5em;
+}
+.nav-links {
+  display: flex;
+  justify-content:flex-start;
+  text-transform: uppercase;
+}
+.nav-links a{
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--grey);
+  border-bottom:2px solid transparent;
+  transition:0.5s ease;
+  transform: translateX(0%);
+  margin-left: 1em;
+  font-family: var(--paragraph-font);
+  transition: 0.5s all ease-in-out;
+
+}
+.nav-links a:hover{
+  color:var(--blue);
+  transition: 0.5s all ease-in-out;
+}
