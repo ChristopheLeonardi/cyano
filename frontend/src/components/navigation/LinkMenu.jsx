@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 import './LinkMenu.css'
 
+
 const LinkMenu = ({arrayItem}) => {
-  console.log(arrayItem)
   
   return(
     <>
@@ -16,7 +16,7 @@ const LinkMenu = ({arrayItem}) => {
                   {item.child.map(child => {
                     return (
                       <li key={child.id} className="second-level" >
-                        <Link to={child.path}>{child.title}</Link>
+                        <Link to={item.path + '/' + child.path}>{child.title}</Link>
                       </li>
                     )
                   })}

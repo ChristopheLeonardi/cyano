@@ -1,0 +1,21 @@
+.entete{
+  margin: auto;
+}
+.entete h1{
+  font-family: var(--primary-font);
+  text-transform: uppercase;
+}
+
+.entete h1, p{
+  text-align: center;
+}
+
+.entete h1::after{
+  content: '';
+  display: block;
+  margin: 0.4em auto;
+  width: 180px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--gradient);
+}

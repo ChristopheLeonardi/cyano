@@ -1377,6 +1377,19 @@ export interface ApiSerieSerie extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    image: Attribute.Media<'images'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    catSlug: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Attribute.DefaultTo<'series'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1459,6 +1472,13 @@ export interface ApiTechniqueTechnique extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    catSlug: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Attribute.DefaultTo<'techniques'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1536,6 +1556,12 @@ export interface ApiTirageTirage extends Schema.CollectionType {
       'api::technique.technique'
     >;
     slug: Attribute.UID<'api::tirage.tirage', 'title'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    catSlug: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

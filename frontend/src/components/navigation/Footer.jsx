@@ -5,7 +5,6 @@ import LinkMenu from './LinkMenu';
 import './Footer.css';
 
 const Footer = ({ config }) => {
-  console.log(config)
   return(
     <footer>
     <Link className="logo-footer" title="retourner à la page d'accueil" to="/">

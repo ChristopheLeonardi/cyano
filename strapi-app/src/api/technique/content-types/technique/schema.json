@@ -74,6 +74,15 @@
       },
       "type": "uid",
       "targetField": "title"
+    },
+    "catSlug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "default": "techniques"
     }
   }
 }
